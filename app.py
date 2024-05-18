@@ -15,12 +15,12 @@ from PIL import Image, ImageOps
 import editdistance
 import pytesseract
 import os
+import pickle
 
 @st.cache_resource
 def load_model():
     # Update this path to point to where your 'autoencoder.h5' file is located
-    model_path = '/content/PROJECT11_FINALPROJECT_CPE013/autoencoder.h5'  # Update this line with the correct path
-    model = tf.keras.models.load_model(model_path)
+    model =  model = pickle.load(open(f'{working_dir}/autoencoder.h5', 'rb'))
     return model
 
 model = load_model()
