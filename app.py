@@ -168,12 +168,6 @@ if st.button("Process"):
           string =f"WER Accuracy: {wer_calc:.2f}% | CER Accuracy: {cer_calc:.2f}%" 
           
           st.success(string)
-
-          for line, conf in line_conf:
-            print(f"Line: {line} | Confidence: {conf}")
-
-          if not lines:
-             st.error("Could not find contours in the image.")
       
           
 working_dir = os.path.dirname(os.path.abspath(__file__))
