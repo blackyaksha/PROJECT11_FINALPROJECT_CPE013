@@ -28,7 +28,7 @@ model = load_model()
 
 st.write("""
 # Text Detection and Extraction
-<br> By Tacsay & Yu
+### By Tacsay & Yu
 """)
 
 truth = st.text_input('Actual Text')
@@ -163,9 +163,7 @@ if st.button("Process"):
               if lines[i].strip():
                   line_conf.append((lines[i], round(confs[i], 3)))
 
-          string =f"WER Accuracy: {wer_calc:.2f}% \n" \
-                   f"CER Accuracy: {cer_calc:.2f}% \n" \
-                   f"Avg. Confidence: {average_conf:.2f}%"
+          string =f"WER Accuracy: {wer_calc:.2f}% | CER Accuracy: {cer_calc:.2f}% | Avg. Confidence: {average_conf:.2f}%" 
           
           st.success(string)
       else:
