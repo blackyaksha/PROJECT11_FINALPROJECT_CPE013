@@ -1,5 +1,5 @@
 # PROJECT 11: FINAL PROJECT
-## *Title*
+## Text Detection and Recognition for Text Extraction of Stained Scanned Printed Document Images
 ### Model Deployment
 
 Members: **Tacsay, Marie Emmanuelle** | **Yu, Daniel Kimbell**
