@@ -162,12 +162,19 @@ if st.button("Process"):
           for i in range(len(lines)):
               if lines[i].strip():
                   line_conf.append((lines[i], round(confs[i], 3)))
+          
+          print("Detected Text:\n", text)
 
           string =f"WER Accuracy: {wer_calc:.2f}% | CER Accuracy: {cer_calc:.2f}%" 
           
           st.success(string)
-      else:
-          st.error("Could not find contours in the image.")
+
+          for line, conf in line_conf:
+            print(f"Line: {line} | Confidence: {conf}")
+
+          if not lines:
+             st.error("Could not find contours in the image.")
+      
           
 working_dir = os.path.dirname(os.path.abspath(__file__))
 st.write(f"Working Directory: {working_dir}")
