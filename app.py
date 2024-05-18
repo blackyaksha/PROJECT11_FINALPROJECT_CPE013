@@ -163,7 +163,10 @@ if st.button("Process"):
               if lines[i].strip():
                   line_conf.append((lines[i], round(confs[i], 3)))
 
-          string = f"OUTPUT : WER Accuracy: {wer_calc :.2f}%, CER Accuracy: {cer_calc :.2f}%, Avg. Confidence: {average_conf :.2f}%"
+          string = f"OUTPUT : \n
+                    WER Accuracy: {wer_calc :.2f}% \n
+                    CER Accuracy: {cer_calc :.2f}% \n
+                    Avg. Confidence: {average_conf :.2f}%"
           st.success(string)
       else:
           st.error("Could not find contours in the image.")
