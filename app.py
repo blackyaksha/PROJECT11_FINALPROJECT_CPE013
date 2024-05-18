@@ -18,8 +18,6 @@ import os
 import pickle
 import subprocess
 
-if st.button("Install Tesseract-OCR"):
-    install_tesseract()
 @st.cache_resource
 def load_model():
     # Update this path to point to where your 'autoencoder.h5' file is located
