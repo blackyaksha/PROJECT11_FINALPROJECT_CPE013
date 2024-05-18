@@ -16,12 +16,12 @@ import editdistance
 import pytesseract
 import os
 import pickle
-import subprocess
 
 @st.cache_resource
+
 def load_model():
-    # Update this path to point to where your 'autoencoder.h5' file is located
-    model = tf.keras.models.load_model('autoencoder.h5')
+    # Update this path to point to where your 'autoencoder.h5' file is located  
+    model = tf.keras.models.load_model('plant_classifier.hdf5')
     return model
 
 model = load_model()
@@ -167,5 +167,4 @@ if st.button("Process"):
       else:
           st.error("Could not find contours in the image.")
 
-working_dir = os.path.dirname(os.path.abspath(__file__))
 st.write(f"Working Directory: {working_dir}")
