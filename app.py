@@ -81,14 +81,17 @@ def find_contours(image):
             return approx
     return None
 
-def draw_contours(orig_image, image, target):
-    approx = rectify(target)
-    pts2 = np.float32([[0, 0], [800, 0], [800, 800], [0, 800]])
-    M = cv2.getPerspectiveTransform(approx, pts2)
-    result = cv2.warpPerspective(image, M, (800, 800))
-    cv2.drawContours(orig_image, [target], -1, (0, 255, 0), 2)
-    #result = cv2.cvtColor(result, cv2.COLOR_BGR2GRAY)
-    return result
+def draw_contours(orig_image,image, target):
+	approx = rectify(target)
+	pts2 = np.float32([[0,0],[800,0],[800,800],[0,800]])
+
+	M = cv2.getPerspectiveTransform(approx,pts2)
+	#result = cv2.warpPerspective(image,M,(800,800))
+
+	cv2.drawContours(image, [target], -1, (0, 255, 0), 2)
+	#result = cv2.cvtColor(result, cv2.COLOR_BGR2GRAY)
+	result = image
+	return result
 
 def calculate_wer(predicted, ground_truth):
     if not isinstance(predicted, str) or not isinstance(ground_truth, str):
