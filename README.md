@@ -7,6 +7,3 @@ Members: **Tacsay, Marie Emmanuelle** | **Yu, Daniel Kimbell**
 *Abstract*
 
 **Web Application Link:** 
-
-
-
