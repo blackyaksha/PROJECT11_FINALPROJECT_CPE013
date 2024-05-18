@@ -20,7 +20,7 @@ import pickle
 @st.cache_resource
 def load_model():
     # Update this path to point to where your 'autoencoder.h5' file is located
-    model =  model = pickle.load(open(f'{working_dir}/autoencoder.h5', 'rb'))
+    model = tf.keras.models.load_model('autoencoder.h5')
     return model
 
 model = load_model()
