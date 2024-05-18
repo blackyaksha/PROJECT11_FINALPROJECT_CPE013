@@ -166,5 +166,6 @@ if st.button("Process"):
           st.success(string)
       else:
           st.error("Could not find contours in the image.")
-
+          
+working_dir = os.path.dirname(os.path.abspath(__file__))
 st.write(f"Working Directory: {working_dir}")
