@@ -18,14 +18,6 @@ import os
 import pickle
 import subprocess
 
-# Install Tesseract-OCR
-import subprocess
-
-# Install Tesseract-OCR using apt
-subprocess.run(["sudo", "apt", "update"], check=True)
-subprocess.run(["sudo", "apt", "install", "tesseract-ocr"], check=True)
-
-
 if st.button("Install Tesseract-OCR"):
     install_tesseract()
 @st.cache_resource
