@@ -27,12 +27,13 @@ def load_model():
 model = load_model()
 
 st.write("""
-# Plant Leaf Detection System by Jonathan
+# Text Detection and Extraction
+<br> By Tacsay & Yu
 """)
 
 truth = st.text_input('Actual Text')
 
-file = st.file_uploader("Choose plant photo from computer", type=["jpg", "png"])
+file = st.file_uploader("Choose document image", type=["jpg", "png"])
 
 def denoise(image):
     size = (612, 360)
@@ -162,7 +163,7 @@ if st.button("Process"):
               if lines[i].strip():
                   line_conf.append((lines[i], round(confs[i], 3)))
 
-          string = f"OUTPUT : WER Accuracy: {wer_calc}%, CER Accuracy: {cer_calc}%, Avg. Confidence: {average_conf}%"
+          string = f"OUTPUT : WER Accuracy: {wer_calc :.2f}%, CER Accuracy: {cer_calc :.2f}%, Avg. Confidence: {average_conf :.2f}%"
           st.success(string)
       else:
           st.error("Could not find contours in the image.")
