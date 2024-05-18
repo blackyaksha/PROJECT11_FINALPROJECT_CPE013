@@ -6,5 +6,3 @@ pillow
 pytesseract
 editdistance
 opencv-python
-tesseract-ocr
-tesseract-ocr-por
