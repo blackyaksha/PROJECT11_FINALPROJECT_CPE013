@@ -1,1 +1,10 @@
-# PROJECT11_FINALPROJECT_CPE013
+# PROJECT 11: FINAL PROJECT
+## *Title*
+### Model Deployment
+
+Members: **Tacsay, Marie Emmanuelle** | **Yu, Daniel Kimbell**
+
+*Abstract*
+
+
+
