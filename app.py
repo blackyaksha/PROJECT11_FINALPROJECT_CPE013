@@ -165,7 +165,7 @@ if st.button("Process"):
           
           print("Detected Text:\n", text)
 
-          string =f"WER Accuracy: {wer_calc:.2f}% | CER Accuracy: {cer_calc:.2f}%" 
+          string = f"Detected Text:\n{text}\n\nWER Accuracy: {wer_calc:.2f}% | CER Accuracy: {cer_calc:.2f}%"
           
           st.success(string)
       
