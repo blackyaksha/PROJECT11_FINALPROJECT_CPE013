@@ -21,9 +21,7 @@ import subprocess
 # Install Tesseract-OCR
 def install_tesseract():
     try:
-        subprocess.run(["sudo", "apt", "update"], check=True)
         subprocess.run(["sudo", "apt", "install", "tesseract-ocr"], check=True)
-        subprocess.run(["sudo", "apt", "install", "libtesseract-dev"], check=True)
         st.success("Tesseract-OCR installed successfully.")
     except subprocess.CalledProcessError as e:
         st.error(f"Error installing Tesseract-OCR: {e}")
