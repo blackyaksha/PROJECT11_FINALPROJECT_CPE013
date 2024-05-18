@@ -16,7 +16,22 @@ import editdistance
 import pytesseract
 import os
 import pickle
+import subprocess
 
+# Install Tesseract-OCR
+def install_tesseract():
+    try:
+        subprocess.run(["sudo", "apt", "update"], check=True)
+        subprocess.run(["sudo", "apt", "install", "tesseract-ocr"], check=True)
+        subprocess.run(["sudo", "apt", "install", "libtesseract-dev"], check=True)
+        st.success("Tesseract-OCR installed successfully.")
+    except subprocess.CalledProcessError as e:
+        st.error(f"Error installing Tesseract-OCR: {e}")
+
+st.title("Install Tesseract-OCR")
+
+if st.button("Install Tesseract-OCR"):
+    install_tesseract()
 @st.cache_resource
 def load_model():
     # Update this path to point to where your 'autoencoder.h5' file is located
